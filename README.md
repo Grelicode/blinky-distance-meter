@@ -90,7 +90,7 @@ void loop() {
     // brak pomiaru -> wysyłamy distance = -1
     distance_cm = -1;
 
-    // traktujemy jak bezpieczną odległość -> świecą zielone
+  traktujemy jak bezpieczną odległość -> świecą zielone
     digitalWrite(led_green1, HIGH);
     digitalWrite(led_green2, HIGH);
   }
@@ -100,7 +100,6 @@ void loop() {
       // CZERWONA strefa: <= 5 cm
       digitalWrite(led_red1, HIGH);
       digitalWrite(led_red2, HIGH);
-
       tone(buzzer, 3500);
       buzzerOn = true;
     }
@@ -108,7 +107,6 @@ void loop() {
       // POMARAŃCZOWA strefa: 5–15 cm
       digitalWrite(led_orange1, HIGH);
       digitalWrite(led_orange2, HIGH);
-
       tone(buzzer, 2000);
       buzzerOn = true;
     }
@@ -116,7 +114,6 @@ void loop() {
       // ZIELONA strefa: > 15 cm
       digitalWrite(led_green1, HIGH);
       digitalWrite(led_green2, HIGH);
-
       noTone(buzzer);
       buzzerOn = false;
     }
